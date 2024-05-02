@@ -1,5 +1,21 @@
 controllers:
-    resource:
-        path: ../src/Controller/
-        namespace: App\Controller
-    type: attribute
+  resource: "../src/Controller/"
+  type: attribute
+
+title_routes:
+  resource: App\Controller\TitleController
+  type: attribute
+
+user_routes:
+  resource: App\Controller\UserController
+  type: attribute
+
+register:
+  path: /register
+  controller: App\Controller\RegisterController::register
+  methods: [POST]
+
+register_multiple:
+  path: /register_multiple
+  controller: 'App\Controller\RegisterController::registerMultipleUsers'
+  methods: [POST]
